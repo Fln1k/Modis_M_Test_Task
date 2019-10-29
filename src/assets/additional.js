@@ -1,4 +1,4 @@
-all_products_list=[{id: 1, name: 'Asus', price: 2.5, color: '#e61c1c'},
+all_products_list=[{name: 'Asus', price: 2.5, color: '#e61c1c'},
 {name: 'Acer',price: 5.5, color: '#e61cb1'},
 {name: 'Lenovo',price: 122.5, color: '#1c48e6'},
 {name: 'Mac',price: 25.5, color: '#1ce6b7'},
