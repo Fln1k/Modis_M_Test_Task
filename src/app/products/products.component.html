@@ -1,0 +1,73 @@
+<div id="myModal" class="modal">
+	<div class="modal-content" style="background-color: #151952; color: white;">
+		<div>
+				<h2 style="text-align: center;">Список</h2>
+				<button class="btn btn-outline-secondary" onclick="create_product();" style="text-align: right; width: 50%; text-align: center; font-size: 15px; color: white;">Создать</button>	
+				<button class="btn btn-outline-secondary" onclick="close_modal_window();" style="text-align: right; width: 50%; text-align: center; font-size: 15px; color: white;">Закрыть</button>
+		</div>
+		<div>
+      		<table class="table table-striped" style="background-color: #151952; color: white;">
+				<thead>
+	    			<tr>
+				        <th style="text-align: center; border: none;">Наименование</th>
+				        <th style="text-align: center; border: none;">Цена</th>
+				        <th style="text-align: center; border: none;">Цвет</th>
+	    			</tr>
+				</thead>
+				<tbody id="all_products_table_body">
+				</tbody>
+			</table>
+		</div>
+		<div style="width: 100%;text-align: right; padding: 15px; background-color: #151952; color: white;">
+			<h3>sergeitrigubovfleps@gmail.com</h3>
+    	</div>
+	</div>
+</div>
+
+<div id="myModal1" class="modal">
+	<div class="modal-content" style="background-color: #151952; color: white;">
+		<div>
+			<h2 id="edit_product_text" style="text-align: center;"></h2>
+			<button id="save_edit_product" class="btn btn-outline-secondary" style="text-align: right; width: 50%; text-align: center; font-size: 15px;">Сохранить</button>	
+			<button id="close_edit_product" class="btn btn-outline-secondary" onclick="document.getElementById('myModal1').style.display = 'none';
+            open_modal_window();" style="text-align: right; width: 50%; text-align: center; font-size: 15px;">Закрыть</button>
+		</div>
+		<div>
+			<table class="table table-striped" style="background-color: #151952; color: white;">
+				<thead>
+	    			<tr ng-repeat="item in list.items">
+				        <th style="text-align: center; border: none;">Наименование</th>
+				        <th style="text-align: center; border: none;">Цена</th>
+				        <th style="text-align: center; border: none;">Цвет</th>
+	    			</tr>
+				</thead>
+				<tbody id="all_products_table_body">
+					<tr ng-repeat="item in list.items">
+						<td id="edit_product_name" style="text-align: center; border: none;"></td>
+						<td id="edit_product_price" style="text-align: center; border: none;"></td>
+						<td id="edit_product_color" style="text-align: center; border: none;"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div style="width: 100%;text-align: right; padding: 15px; background-color: #151952; color: white;">
+			<h3>sergeitrigubovfleps@gmail.com</h3>
+		</div>
+	</div>
+</div>
+
+<table class="table table-striped" style="background-color: #151952; color: white;">
+	<thead>
+	    <tr>
+	        <th style="text-align: center; border: none;">Наименование</th>
+	        <th style="text-align: center; border: none;">Цена</th>
+	        <th style="text-align: center; border: none;">Цвет</th>
+	    </tr>
+	</thead>
+	<tbody id="products_table_body">
+	</tbody>
+</table>
+<div class="text-left">
+    <button class="btn btn-outline-secondary" onclick="open_modal_window()" style="width: 50%">Выбрать</button>
+    <button class="btn btn-outline-secondary" onclick="clearlist();" style="width: 50%">Очистить</button>
+</div>
